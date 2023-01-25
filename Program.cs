@@ -1,7 +1,15 @@
 var builder = WebApplication.CreateBuilder(args);
+void ConfigureServices(IServiceCollection services)
+{
+    services.AddHttpClient("swapi", client =>
+    {
+        client.BaseAddress = new Uri("https://swapi.dev/api/");
+    });
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+}
 
 var app = builder.Build();
 
