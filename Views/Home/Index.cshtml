@@ -1,5 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    Random RB = new Random();
+    string[] names = new[] {"LaDanian","Marcus","Walter","Ricky","Marshall"};
+
+    string name = names[RB.Next(0, names.Length)];
 }
 
 <div class="text-center">
